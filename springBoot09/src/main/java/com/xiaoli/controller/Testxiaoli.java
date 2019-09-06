@@ -6,6 +6,7 @@ import com.xiaoli.entity.Entity;
 import com.xiaoli.entity.User;
 import com.xiaoli.entityRepository.EntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,5 +28,10 @@ public class Testxiaoli {
         List<Entity> all1 = entityRepository.findAll();
         System.out.println(all1);
         return "jiushizhemediao1";
+    }
+
+    @Scheduled(cron = "0/3 * * * * *")
+    public void TaskScheduing(){
+        System.out.println("hello11");
     }
 }
