@@ -24,7 +24,7 @@ public class Testxiaoli {
     public String getAll(){
         List<User> all = userMapper.findAll();
         System.out.println(all);
-
+        System.out.println("xiaolijiushishuai");
         List<Entity> all1 = entityRepository.findAll();
         System.out.println(all1);
         return "jiushizhemediao1";
